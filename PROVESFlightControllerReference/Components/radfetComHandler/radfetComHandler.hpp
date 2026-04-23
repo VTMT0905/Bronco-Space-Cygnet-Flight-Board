@@ -80,13 +80,10 @@ class radfetComHandler final : public radfetComHandlerComponentBase {
                                  const Fw::CmdStringArg& cmd
                                 ) override;
 
-    void DOWNLINK_REQUEST_cmdHandler(FwOpcodeType opCode, 
+    void DOWNLINK_REQUEST_cmdHandler(FwOpcodeType opCode,
                                      U32 cmdSeq,
                                      U32 numPackets
                                     ) override;
-
-
-
 
     void processSensorData();
     bool accumulateSensorData(const U8* data, U32 size);
@@ -98,17 +95,15 @@ class radfetComHandler final : public radfetComHandlerComponentBase {
     //U32 calculateChecksum(void* data, U32 size);
     void removeProcessedData(U32 size);
 
-
     bool parseDownlinkPacket(const U8* data, U32 size);
-
 
     bool m_periodicReadings;
     U32 m_readingInterval;
     U32 m_readingsCount;
     //U32 m_storedReadings;  // for CADENCE
     U32 m_lastRawCounts;
-    U32  m_lastReadingTimestamp;
-    U32  m_packetsDownlinked;
+    U32 m_lastReadingTimestamp;
+    U32 m_packetsDownlinked;
 
     static constexpr U32 DATA_BUFFER_SIZE = 512;
     U8 m_dataBuffer[DATA_BUFFER_SIZE];
@@ -138,9 +133,8 @@ class radfetComHandler final : public radfetComHandlerComponentBase {
         U32 checksum;
     };
 
-
 };
 
-}// namespace Components
+} // namespace Components
 
 #endif
