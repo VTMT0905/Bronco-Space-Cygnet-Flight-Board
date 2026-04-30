@@ -111,8 +111,13 @@ telemetry packets ReferenceDeploymentPackets {
     ReferenceDeployment.radfetComHandler.SensorStatus
     ReferenceDeployment.radfetComHandler.ReadingsCount
     ReferenceDeployment.radfetComHandler.PacketsDownlinked
-  #  ReferenceDeployment.radfetComHandler.FileErrorCount
-  #  ReferenceDeployment.radfetComHandler.ImagesSaved
+    ReferenceDeployment.radfetComHandler.LastModuleNum
+    ReferenceDeployment.radfetComHandler.LastRadfetNum
+    ReferenceDeployment.radfetComHandler.LastMilliVolts
+    ReferenceDeployment.radfetComHandler.LastDoseEstimate
+    ReferenceDeployment.radfetComHandler.LastDoseRate
+    ReferenceDeployment.radfetComHandler.LastPacketId
+    ReferenceDeployment.radfetComHandler.LastDownlinkTimestamp
   }
 
   ### Health and Status Packets ###
